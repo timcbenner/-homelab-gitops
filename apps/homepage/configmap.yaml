@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: homepage
+  namespace: homepage
+data:
+  services.yaml: |
+    - Cluster Management:
+        - ArgoCD:
+            icon: argocd.png
+            href: http://10.0.0.59:30080
+            description: GitOps deployment management
+
+        - Portainer:
+            icon: portainer.png
+            href: https://10.0.0.59:30779
+            description: Container and cluster management
+
+    - Monitoring:
+        - Grafana:
+            icon: grafana.png
+            href: http://10.0.0.59:30030
+            description: Dashboards and visualization
