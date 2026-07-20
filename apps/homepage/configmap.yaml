@@ -11,7 +11,7 @@ data:
             href: http://10.0.0.59:30080
             description: GitOps deployment management
 
-        - Portainer:
+#        - Portainer:
             icon: portainer.png
             href: https://10.0.0.59:30779
             description: Container and cluster management
