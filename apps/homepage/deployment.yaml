@@ -23,7 +23,7 @@ spec:
               containerPort: 3000
           env:
             - name: HOMEPAGE_ALLOWED_HOSTS
-              value: "10.0.0.59:30082,10.0.0.65:30082,localhost:3000"
+              value: "homepage.home,10.0.0.59:30082,10.0.0.65:30082,localhost:3000"
           volumeMounts:
             - name: homepage-config
               mountPath: /app/config/services.yaml
