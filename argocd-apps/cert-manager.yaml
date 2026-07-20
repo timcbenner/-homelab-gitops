@@ -17,7 +17,8 @@ spec:
       values: |
         crds:
           enabled: true
-          keep:  true
+          keep: true
+
         prometheus:
           enabled: true
 
@@ -31,3 +32,4 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+      - SkipDryRunOnMissingResource=true
