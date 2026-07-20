@@ -3,6 +3,7 @@ kind: Application
 metadata:
   name: longhorn
   namespace: gitops
+
 spec:
   project: default
 
@@ -10,11 +11,13 @@ spec:
     repoURL: https://charts.longhorn.io
     chart: longhorn
     targetRevision: 1.12.0
+
     helm:
       releaseName: longhorn
-      values:
-      preUpgradeChecker:
-      jobEnabled" false |
+      values: |
+        preUpgradeChecker:
+          jobEnabled: false
+
         defaultSettings:
           defaultReplicaCount: 2
           storageMinimalAvailablePercentage: 20
@@ -35,6 +38,7 @@ spec:
     automated:
       prune: true
       selfHeal: true
+
     syncOptions:
       - CreateNamespace=true
       - ServerSideApply=true
